@@ -1,68 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-.container{
-    background-color: #222242;
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    width: 100%;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.stopwatch-container {
     text-align: center;
-    position: absolute;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
-.wrapper{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+
+.display {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
-.wrapper p{
-    position: relative;
-    display: inline-block;
-    color: #ffffff;
-    z-index: 9999;
-    font-size: 48px;
-    margin-bottom: 120px;
+
+.controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.wrapper p::before{
-    content: '';
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background-color: #151538;
-    z-index: -1;
-    border-radius: 50%;
-	left: -10%;
-    top: -118%;
-    animation-name: shine;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+
+.controls button:hover {
+    background-color: #ddd;
 }
-@keyframes shine{
-    0%,100%{
-        box-shadow: 0px 0px 32px -12px rgba(246, 180, 0, .5);
-    }
-    50%{
-        box-shadow: 0px 0px 32px 3px rgba(246, 180, 0, .5);
-    }
+
+#laps {
+    margin-top: 20px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0.9rem;
+    text-align: left;
 }
-button{
-    background-color: #222242;
-    padding: 10px 38px;
-    border: 1px solid #A9A9A9;
-    border-radius: 28px;
-    color: #fff;
-    transition: all .2s ease;
-    outline: 0;
-}
-button:not(:last-child){
-    margin-right: 20px;
-}
-button:hover,
-button:focus
-{
-    border-color: #F6B400;
-    color: #F6B400;
-    box-shadow: 0px 4px 27px -12px #F6B400;
+
+#laps li {
+    margin: 5px 0;
+    padding: 5px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
